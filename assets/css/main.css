@@ -554,7 +554,8 @@ textarea::placeholder {
 
 .main-general__subtitle p{
   font-size: 20px;
-  width: 60%;
+width: 50%;
+
   text-transform: inherit;
 }
 /** Methodology */
@@ -919,8 +920,43 @@ textarea::placeholder {
   grid-template-columns: 50% 50%;
 }
 .main-team__boxcontent{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-pills li{
+  width: 50%;
+  padding-left: 30px;
+  padding-bottom: 15px;
+}
+.plus{
+  padding: 5px;
+  text-align: center;
+}
+
+.hover_plus:hover{
+  background: #000531;
+  color: #fff;
+  transition: 0.3s ;
+}
+
+.hover_plus p{
+  display: none;
+  transition: 0.3s ;
+}
+.hover_plus:hover  p{
+  display: initial;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s ;
+}
+.hover_plus:hover  img{
+  display: none;
+}
+.nav-link__team:hover {
+  background: #000531;
+  color: #fff;
+  text-decoration: none;
 }
 
 .main-team__box p{
