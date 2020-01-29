@@ -1061,6 +1061,13 @@ width: 50%;
   height: 100%;
   flex-direction: column;
 }
+.one_bluelight--testimonials{
+  top: 24%;
+  left: 10%;
+  width: 100%;
+}
+
+
 
 @media (min-width: 0px) and (max-width: 767px){
   .main-banner__content{
