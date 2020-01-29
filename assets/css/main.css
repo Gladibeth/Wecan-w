@@ -1067,6 +1067,11 @@ width: 50%;
   width: 100%;
 }
 
+.main-general__title--contacto p{
+  text-transform: inherit;
+  width: 70%;
+}
+
 
 
 @media (min-width: 0px) and (max-width: 767px){
