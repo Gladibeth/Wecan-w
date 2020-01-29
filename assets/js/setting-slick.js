@@ -4,14 +4,14 @@ $('.main-clients__content').slick({
   slidesToShow: 4,
   slidesToScroll: 2,
   dots: false,
-  arrows: true,
+  arrows: false,
   responsive: [{
       breakpoint: 1200,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        
       }
     },
     {
