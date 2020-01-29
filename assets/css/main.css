@@ -1023,6 +1023,7 @@ width: 50%;
 }
 .main-team{
   position: relative;
+  margin-bottom: 60px;
 }
 .main-team__float{
   position: absolute;
@@ -1061,16 +1062,23 @@ width: 50%;
   height: 100%;
   flex-direction: column;
 }
-.one_bluelight--testimonials{
-  top: 24%;
+.one_bluelight--contact{
+  top: -30%;
   left: 10%;
   width: 100%;
+  height: auto;
 }
 
 .main-general__title--contacto p{
   text-transform: inherit;
   width: 70%;
+  color: #fff;
 }
+
+.main-general__title--contacto{
+  align-items: flex-end;
+}
+
 
 
 
