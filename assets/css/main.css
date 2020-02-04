@@ -272,6 +272,9 @@ section {
 .navbar-brand {
   width: 250px;
 }
+.navbar-brand-fixed{
+  width: 190px;
+}
 
 .navbar-brand:hover {
   color: #d9c8c0;

@@ -19,25 +19,21 @@ $(function () {
 
 
 // // Menú fixed
-// $(window).scroll(function () {
-//   if ($(document).scrollTop() > 70 && ($(window).width() >= 0)) {
-//     $('.navbar-fixed-js').addClass('fixed');
-//     $('.nav-link').addClass('fixed-color');
-//     $('.nav-link--btn').addClass('fixed-color--btn');
-//     $('.nav-top__header').addClass('nav-top__header--detele');
-//     $('.hamburger-inner').addClass('js-hamburger');
-//     $("#iso").addClass('img-size').attr('src', 'assets/img/Logo_CM.png').removeClass('scroll-up');
+$(window).scroll(function () {
+  if ($(document).scrollTop() > 70 && ($(window).width() >= 0)) {
+    $('.navbar-fixed-js').addClass('fixed');
+    $('.navbar-brand').addClass('navbar-brand-fixed');
+    // $("#iso").removeClass('img-size').attr('src', 'assets/img/logo.svg').removeClass('scroll-up');
 
-//   } else {
-//     $('.navbar-fixed-js').removeClass('fixed');
-//     $('.nav-link').removeClass('fixed-color');
-//     $('.nav-link--btn').removeClass('fixed-color--btn');
-//     $('.nav-top__header').removeClass('nav-top__header--detele');
-//     $('.hamburger-inner').removeClass('js-hamburger');
-//     $("#iso").removeClass('img-size').attr('src', 'assets/img/logo-color.png').removeClass('scroll-up');
 
-//   }
-// });
+  } else {
+    $('.navbar-fixed-js').removeClass('fixed');
+    $('.nav-link').removeClass('fixed-color');
+    $('.navbar-brand').removeClass('navbar-brand-fixed');
+    // $("#iso").addClass('img-size').attr('src', 'assets/img/logo.png').removeClass('scroll-up');
+
+  }
+});
 
 //menu drop
 $(document).ready(function () {
