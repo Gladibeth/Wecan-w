@@ -242,7 +242,16 @@ section {
   color: #fff !important;
   background-color:  #00012e;
 }
-
+.btn-contact{
+  background: #000531;
+  border-radius: 10px;
+  color: #fff!important;
+}
+.btn-contact:hover{
+  border:1px solid #00a4e1;
+ background: #fff!important;
+ color: #00a4e1!important;
+}
 .nav-link.fixed-color {
   color: #000;
   transition: 0.3s ease-in-out;

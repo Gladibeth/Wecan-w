@@ -12,6 +12,9 @@ $(function () {
   $('.nav-link__mobile').on('click', function () {
     $('.offcanvas-collapse').removeClass('open')
   })
+
+
+  parallaxOnMouseMove($('.main-text'))
 })
 
 
@@ -74,3 +77,16 @@ $(document).ready(function () {
    initTyped('.js-typed');
   });
  })(jQuery);
+
+
+ function parallaxOnMouseMove(elem) {
+
+  elem.closest('section').mousemove(function (event) {
+    elem.closest('section').css({
+      'background-position': `${(($(window).width() / 2) - event.pageX) * .002}px, ${(($(window).width() / 2) - event.pageY) * .002}px`
+    })
+    elem.css({
+      transform: `translate(${(($(window).width() / 2) - event.pageX) * .005}px, ${(($(window).width() / 2) - event.pageY) * .005}px)`
+    })
+  })
+}
