@@ -74,12 +74,20 @@ $(document).ready(function () {
   });
  })(jQuery);
 
+ 
+   setTimeout(function () {
+     that.tick();
+   }, delta);
 
  function parallaxOnMouseMove(elem) {
-
-  setTimeout(function () {
-    that.tick();
-  }, delta);
+  elem.closest('section').mousemove(function (event) {
+    elem.closest('section').css({
+      'background-position': `${(($(window).width() / 2) - event.pageX) * .002}px, ${(($(window).width() / 2) - event.pageY) * .002}px`
+    })
+    elem.css({
+      transform: `translate(${(($(window).width() / 2) - event.pageX) * .005}px, ${(($(window).width() / 2) - event.pageY) * .005}px)`
+    })
+  })
 };
 
 window.onload = function () {
@@ -184,11 +192,3 @@ $('.slider-nav-team').slick({
     }
   ]
 });
-elem.closest('section').mousemove(function (event) {
-  elem.closest('section').css({
-    'background-position': `${(($(window).width() / 2) - event.pageX) * .002}px, ${(($(window).width() / 2) - event.pageY) * .002}px`
-  })
-  elem.css({
-    transform: `translate(${(($(window).width() / 2) - event.pageX) * .005}px, ${(($(window).width() / 2) - event.pageY) * .005}px)`
-  })
-})

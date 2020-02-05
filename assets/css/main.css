@@ -181,7 +181,7 @@ section {
 .navbar {
   background-color: #fff;
   transition: 0.3s ease-in-out;
-  padding: 0 80px;
+  padding: 0 110px;
   display: flex;
   height: 100px;
 }
@@ -213,7 +213,7 @@ section {
   font-weight: 500;
   font-size: 18px;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav-item.active .nav-link{
@@ -640,7 +640,7 @@ textarea::placeholder {
   padding-bottom: 0;
   display: flex;
   justify-content: center;
-  height: 70px;
+  height: 50px;
 }
 
 .main-methodology__box{
@@ -1086,10 +1086,13 @@ textarea::placeholder {
   flex-wrap: wrap;
   justify-content: center;
 }
-.nav-pills li{
+.main-team__boxcontent.nav-pills li{
   width: 50%;
   padding-left: 30px;
   padding-bottom: 15px;
+}
+.nav-pills li{
+  padding-left: 0px;
 }
 .plus{
   padding: 5px;
@@ -2007,6 +2010,13 @@ footer{
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
+  .main-methodology__box{
+    width: 100%;
+    padding: 20px;
+  }
+  .main-about__content{
+    grid-gap: 0;
+  }
   .main-banner__content{
     grid-template-columns: 35% 75%;
   }
@@ -2092,7 +2102,7 @@ footer{
     width: 90%;
   }
   .main-about__img {
-    width: 530px;
+    width: 515px;
   }
   .two_bluelight.two_bluelight--about{
     top:70%;
