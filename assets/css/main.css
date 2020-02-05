@@ -1451,3 +1451,13 @@ footer{
   }
 }
 
+/* bounce */
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
