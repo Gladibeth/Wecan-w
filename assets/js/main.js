@@ -192,3 +192,4 @@ elem.closest('section').mousemove(function (event) {
     transform: `translate(${(($(window).width() / 2) - event.pageX) * .005}px, ${(($(window).width() / 2) - event.pageY) * .005}px)`
   })
 })
+
