@@ -245,7 +245,16 @@ section {
   color: #fff !important;
   background-color:  #00012e;
 }
-
+.btn-contact{
+  background: #000531;
+  border-radius: 10px;
+  color: #fff!important;
+}
+.btn-contact:hover{
+  border:1px solid #00a4e1;
+ background: #fff!important;
+ color: #00a4e1!important;
+}
 .nav-link.fixed-color {
   color: #000;
   transition: 0.3s ease-in-out;
@@ -268,6 +277,9 @@ section {
 }
 .navbar-brand.fixed{
   width: 200px;
+}
+.navbar-brand-fixed{
+  width: 190px;
 }
 
 .navbar-brand:hover {
@@ -549,6 +561,7 @@ textarea::placeholder {
 
 .main-general__title--white p{
   color: #fff;
+  line-height: 1.2;
 }
 
 .main-general__title span{
@@ -598,8 +611,8 @@ textarea::placeholder {
   transition: 0.3s ease-in-out;
   padding: 10px 25px;
   border-radius: 0;
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 20px;
+  /* font-weight: 900; */
   border-bottom: 4px solid #00a4e1;
   font-family: 'Montserrat', sans-serif;
 }
@@ -610,7 +623,7 @@ textarea::placeholder {
   transition: 0.3s ease-in-out;
   padding: 10px 25px;
   border-radius: 0;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 300;
   border-bottom: 4px solid transparent;
   font-family: 'Montserrat', sans-serif;
@@ -622,7 +635,7 @@ textarea::placeholder {
 }
 
 .main-methodology__boxitem .nav-pills li{
-  width: 50%;
+  width: 100%;
   padding-left: 0;
   padding-bottom: 0;
   display: flex;
@@ -644,6 +657,7 @@ textarea::placeholder {
   font-weight: 800;
   font-family: 'Montserrat', sans-serif;
   color:#000531;
+  text-align: center;
 }
 .main-methodology__box p{
   text-align: center;
@@ -800,6 +814,7 @@ textarea::placeholder {
   position: absolute;
   top: 155px;
   left: 92px;
+  width: 430px;
 }
 .main-about__box{
   width: 80%;
@@ -845,7 +860,7 @@ textarea::placeholder {
   width: 20px;
 }
 .two_bluelight.two_bluelight--about{
-  top: 50%;
+  top: 85%;
   left: 50%;
 }
 /**/
@@ -900,14 +915,14 @@ textarea::placeholder {
     z-index: 1;
 }
 .four_bluedark--clients{
-  bottom: -26%;
+  bottom: -15%;
   left: 10%;
-  width: 150px;
+  width: 130px;
 }
 
 .five_bluedark--clients{
   left: 30%;
-  bottom: -30%;
+  bottom: -10%;
 }
 .mt-90{
   margin-top: 90px;
@@ -918,7 +933,7 @@ textarea::placeholder {
   position: relative;
 }
 .one_bluelight--testimonials{
-  top: 24%;
+  top: 20%;
   left: 40%;
   width: 90px;
 }
@@ -1456,6 +1471,23 @@ footer{
   }
 }
 @media (min-width: 0px) and (max-width: 767px){
+  .main-testimonials__boximg{
+    width: 60px;
+    height: 60px;
+  }
+  .main-general__title--contacto .main-general__subtitle span{
+    font-size: 15px;
+  }
+  .main-general__title--contacto p{
+    font-size: 20px !important;
+  }
+  .circle_dark--clients{
+    width: 215px !important;
+    top: 25% !important;
+  }
+  .circle_dark.circle_dark--methodology{
+    display: none;
+  }
   .main-footer__redes a i{
     font-size: 20px;
   }
@@ -1687,9 +1719,7 @@ footer{
   .main-about__content{
     grid-template-columns: 1fr;
   }
-  .main-about__item:nth-child(2){
-    display: none;
-  }
+  
   /* .main-about__img {
     width: 345px;
     margin-top: -85px;
@@ -1750,7 +1780,7 @@ footer{
     bottom: 10%;
   }
   footer{
-    padding: 50px 0 0 0;
+    padding: 25px 0 0 0;
   }
   .circle_blue.circle_blue--services{
     width: 80px !important;
@@ -1772,6 +1802,13 @@ footer{
   .main-footer__item:nth-child(2) .main-footer__boxredes{
     display: flex !important;
   }
+  .three_bluelight.three_bluelight--team{
+    bottom: 90%;
+  }
+  .circle_blue--team{
+    display: none;
+  }
+  
 }
 
 

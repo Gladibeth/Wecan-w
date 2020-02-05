@@ -12,26 +12,25 @@ $(function () {
   $('.nav-link__mobile').on('click', function () {
     $('.offcanvas-collapse').removeClass('open')
   })
+
+
+  parallaxOnMouseMove($('.main-text'))
 })
 
 
-// Menú fixed
+// // Menú fixed
 $(window).scroll(function () {
   if ($(document).scrollTop() > 70 && ($(window).width() >= 0)) {
     $('.navbar-fixed-js').addClass('fixed');
-    $('.nav-link').addClass('fixed-color');
-    $('.nav-link--btn').addClass('fixed-color--btn');
-    $('.nav-top__header').addClass('nav-top__header--detele');
-    $('.hamburger-inner').addClass('js-hamburger');
-    $("#iso").addClass('img-size').attr('src', 'assets/img/Logo_CM.png').removeClass('scroll-up');
+    $('.navbar-brand').addClass('navbar-brand-fixed');
+    // $("#iso").removeClass('img-size').attr('src', 'assets/img/logo.svg').removeClass('scroll-up');
+
 
   } else {
     $('.navbar-fixed-js').removeClass('fixed');
     $('.nav-link').removeClass('fixed-color');
-    $('.nav-link--btn').removeClass('fixed-color--btn');
-    $('.nav-top__header').removeClass('nav-top__header--detele');
-    $('.hamburger-inner').removeClass('js-hamburger');
-    $("#iso").removeClass('img-size').attr('src', 'assets/img/logo-color.png').removeClass('scroll-up');
+    $('.navbar-brand').removeClass('navbar-brand-fixed');
+    // $("#iso").addClass('img-size').attr('src', 'assets/img/logo.png').removeClass('scroll-up');
 
   }
 });
@@ -50,63 +49,33 @@ $(document).ready(function () {
 
 // menu hambuger
 
-
-$(".hamburger").on("click", function () {
-  if (!$(this).hasClass("is-active")) {
-    $(this).addClass("is-active")
-    $('.navbar-fixed-js').addClass('fixed');
-    $('.hamburger-inner').addClass('js-hamburger');
-    $("#iso").addClass('img-size').attr('src', 'assets/img/Logo_CM.png').removeClass('scroll-up');
-    $('.nav-link').addClass('fixed-color');
-  } else {
-    $(this).removeClass("is-active")
-    if ($(document).scrollTop() <= 70 && ($(window).width() >= 0)) {
-      $('.navbar-fixed-js').removeClass('fixed');
-      $('.hamburger-inner').removeClass('js-hamburger');
-      $("#iso").removeClass('img-size').attr('src', 'assets/img/logo-color.png').removeClass('scroll-up');
-      $('.nav-link').removeClass('fixed-color');
-
-    }
+( function( $ ) {
+  const $document = $(document);
+  
+  const initTyped = (selector, options) => {
+   let settings = options;
+   if (!settings) {
+    settings = {
+     stringsElement: '#typed-content',
+     typeSpeed: 60,
+     backSpeed: 40,
+     loop: true,
+     showCursor: true
+    };
+   }
+   
+   let typed = new Typed(selector, settings);
   }
-});
+  
+  $document.ready(() => {
+   console.log('ready');
+   
+   initTyped('.js-typed');
+  });
+ })(jQuery);
 
-var TxtType = function (el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
 
-TxtType.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) {
-    delta /= 2;
-  }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 900;
-  }
+ function parallaxOnMouseMove(elem) {
 
   setTimeout(function () {
     that.tick();
@@ -215,3 +184,11 @@ $('.slider-nav-team').slick({
     }
   ]
 });
+elem.closest('section').mousemove(function (event) {
+  elem.closest('section').css({
+    'background-position': `${(($(window).width() / 2) - event.pageX) * .002}px, ${(($(window).width() / 2) - event.pageY) * .002}px`
+  })
+  elem.css({
+    transform: `translate(${(($(window).width() / 2) - event.pageX) * .005}px, ${(($(window).width() / 2) - event.pageY) * .005}px)`
+  })
+})
