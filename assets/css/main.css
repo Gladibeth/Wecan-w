@@ -184,6 +184,9 @@ section {
   padding: 0 110px;
   display: flex;
   height: 100px;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
 }
 
 .navbar .content {
@@ -228,6 +231,7 @@ section {
   font-family: "Montserrat", sans-serif;
   background-color: #000531;
   border-radius: 8px;
+  text-align: center;
 }
 
 
@@ -304,6 +308,10 @@ section {
 .particles{
   position: absolute;
   z-index: -1;
+}
+
+.angle-btn{
+  z-index: 999;
 }
 .one_bluelight{
   top: 20%;
@@ -410,7 +418,9 @@ section {
   color:#000531;
   font-size: 30px;
 }
-
+.main-banner__text{
+  padding-left: 40px;
+}
 .main-banner__text h1{
   font-weight: 900;
   color:#000531;
@@ -579,9 +589,11 @@ textarea::placeholder {
 
 .main-general__description p{
   margin-bottom: 0;
+  font-size: 18px;
 }
 .main-general__description p strong{
   color:#000531;
+  font-size: 18px;
 }
 
 .main-general__description--white p{
@@ -895,7 +907,7 @@ textarea::placeholder {
 }
 .slick-initialized .slick-slide {
   display: block;
-  margin: 10px;
+  margin-right: 20px;
 }
 .slick-track {
   padding: 12px 0 12px 0;
@@ -908,7 +920,7 @@ textarea::placeholder {
 }
 .two_bluelight--clients{
   top: 54%;
-  left: 18%;
+  left: 5%;
   width: 20px;
 }
 
@@ -927,6 +939,7 @@ textarea::placeholder {
   bottom: -15%;
   left: 10%;
   width: 130px;
+  display: none;
 }
 
 .five_bluedark--clients{
@@ -1669,19 +1682,35 @@ footer{
   grid-gap: 30px;
 }
 .main-portfolio__card{
-  /* background-color: #000531; */
   height: 455px;
-  border-radius: 65px;
+  border-radius: 15px;
   position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease-in-out;
 }
+
 .main-portfolio__mask{
   position: absolute;
   right: 0;
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 5, 49, 0.87);
-  border-radius: 65px;
+  background-color: rgba(0, 5, 49, 0.65);
+  /* background-color: rgba(0, 5, 49, 0.73); */
+  border-radius: 15px;
+  z-index: 88;
+}
+
+.main-portfolio__maskimg{
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }
 .main-portfolio__img{
   width: 100%;
@@ -1690,8 +1719,35 @@ footer{
 .main-portfolio__img img{
   width: 100%;
   height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  transition: 0.3s ease-in-out;
 }
-
+.main-portfolio__card:hover .main-portfolio__img img{
+  animation: navigateDown 30s 0.3s infinite ease-out;
+  /* filter: brightness(50%) blur(3px); */
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.main-portfolio__card:hover .main-portfolio__mask{
+  z-index: -1;
+}
+@keyframes navigateDown {
+  0% {
+    object-position: top;
+  }
+  
+  50% {
+    object-position: bottom;
+  }
+  100% {
+    object-position: top;
+  }
+}
 .circle_blue.circle_blue--portfolio{
   right: 20%;
   top: 15%;
@@ -1703,6 +1759,7 @@ footer{
 .slick-initialized .slick-slide:focus, .main-mask-testimonials:focus,.main-testimonials__boximg img:focus{
   outline: none;
 }
+
 @media (min-width: 0px) and (max-width: 529px){
   .main-services__item{
     width: 50%;
@@ -1806,6 +1863,15 @@ footer{
   }
 }
 @media (min-width: 0px) and (max-width: 767px){
+  .main-portfolio__slider{
+    display: block;
+  }
+  .main-portfolio__content{
+    display: none;
+  }
+  /* .main-portfolio__content{
+    display: block;
+  } */
   .main-testimonials__boximg{
     width: 60px;
     height: 60px;
