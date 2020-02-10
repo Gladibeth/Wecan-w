@@ -2140,8 +2140,9 @@ footer{
     top: 14%;
   }
   .three_bluedark {
-    left: 70%;
     bottom: 30%;
+    left: 80%;
+    width: 20px;
   }
   .three_bluelight.three_bluelight--services{
     display: none;
