@@ -2363,6 +2363,10 @@ footer{
   .circle_blue--team{
     display: none;
   }
+  .btn-close{
+    width: 50px;
+    height: 50px;
+  }
   
 }
 
