@@ -1928,11 +1928,11 @@ footer{
     margin-top: 20px;
   }
   .nav-pills .nav-link--methodolgy.active, .nav-pills .show > .nav-link--methodolgy{
-    font-size: 12px;
+    font-size: 13px;
     padding: 20px 0px;
   }
   .nav-link--methodolgy{
-    font-size: 12px !important;
+    font-size: 13px !important;
     padding: 20px 0px;
   }
   .main-methodology__boxitem .nav-pills li{
@@ -2002,6 +2002,12 @@ footer{
   }
 }
 @media (min-width: 0px) and (max-width: 767px){
+  .main-testimonials{
+    padding-right: 0 !important;
+  }
+  .main-testimonials .container{
+    padding-right: 0 !important;
+  }
   
   .cta_modal .btn_custom{
     padding: 13px 20px !important;
