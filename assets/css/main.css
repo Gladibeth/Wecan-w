@@ -2181,7 +2181,8 @@ footer{
     display: none;
   }
   .line{
-    width: 100px;
+    width: 125px;
+    bottom: -50px;
   }
   .circle_dark {
     width: 30px;
